@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Fab Fal Quiz</string>
+
+    <string-array name="questions">
+        <item>Which cameo character do you look forward to seeing the most?</item>
+    </string-array>
+
+    <string-array name="alex_answers">
+        <item>Soph</item>
+    </string-array>
+
+    <string-array name="amy_answers">
+        <item>Carrie</item>
+    </string-array>
+
+    <string-array name="jack_answers">
+        <item>Barry Bidswell</item>
+    </string-array>
+
+    <string-array name="sam_answers">
+        <item>The Monj Himself</item>
+    </string-array>
+
+    <string-array name="tom_answers">
+        <item>Wil\' Waddle</item>
+    </string-array>
+
+
+</resources>
