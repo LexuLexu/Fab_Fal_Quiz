@@ -3,26 +3,74 @@
 
     <string-array name="questions">
         <item>Which cameo character do you look forward to seeing the most?</item>
+        <item>Exam tomorrow, how\’d you feel?</item>
+        <item>If you didn\’t do frisbee, what would you be doing?</item>
+        <item>It\’s 7pm, what are you up to?</item>
+        <item>What\'s for breakfast?</item>
+        <item>Dream holiday destination?</item>
+        <item>You\’re injured, but where?</item>
+        <item>What\’s your spirit animal?</item>
+
     </string-array>
 
     <string-array name="alex_answers">
         <item>Soph</item>
+        <item>Alex Answers</item>
+        <item>Alex Answerd</item>
+        <item>Alex Answef</item>
+        <item>Alex Answerg</item>
+        <item>Alex Answerh</item>
+        <item>Alex Answerj</item>
+        <item>Alex Answerk</item>
+
     </string-array>
 
     <string-array name="amy_answers">
         <item>Carrie</item>
+        <item>Amy Answers</item>
+        <item>Amy Answerd</item>
+        <item>Amy Answerf</item>
+        <item>Amy Answerg</item>
+        <item>Amy Answerh</item>
+        <item>Amy Answerj</item>
+        <item>Amy Answerk</item>
+
     </string-array>
 
     <string-array name="jack_answers">
         <item>Barry Bidswell</item>
+        <item>Jack Answers</item>
+        <item>Jack Answerd</item>
+        <item>Jack Answerf</item>
+        <item>Jack Answerg</item>
+        <item>Jack Answerh</item>
+        <item>Jack Answerj</item>
+        <item>Jack Answerk</item>
+
     </string-array>
 
     <string-array name="sam_answers">
         <item>The Monj Himself</item>
+        <item>Sam Answers</item>
+        <item>Sam Answerd</item>
+        <item>Sam Answerf</item>
+        <item>Sam Answerg</item>
+        <item>Sam Answerh</item>
+        <item>Sam Answerj</item>
+        <item>Sam Answerk</item>
+
     </string-array>
 
     <string-array name="tom_answers">
         <item>Wil\' Waddle</item>
+        <item>Tom Answers</item>
+        <item>Tom Answerd</item>
+        <item>Tom Answerf</item>
+        <item>Tom Answerg</item>
+        <item>Tom Answerh</item>
+        <item>Tom Answerj</item>
+        <item>Tom Answerk</item>
+
     </string-array>
 
 

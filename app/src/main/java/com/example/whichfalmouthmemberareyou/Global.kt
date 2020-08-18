@@ -42,4 +42,13 @@ class Global : Application() {
 
     }
 
+    fun atLeastTen (): Boolean {
+        if ((this.alex + this.amy + this.jack + this.sam + this.tom) >= 10) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
 }

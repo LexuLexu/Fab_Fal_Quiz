@@ -1,15 +1,14 @@
 package com.example.whichfalmouthmemberareyou
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class QuizActivity : AppCompatActivity() {
+abstract class QuizActivity : AppCompatActivity() {
 
     val buttonList = ArrayList<Button>()
     val answerList = ArrayList<String>()
@@ -17,6 +16,8 @@ class QuizActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
+
+        val questionList: MutableList<String> = resources.getStringArray(R.array.questions).toMutableList()
 
         val button1View = findViewById<Button>(R.id.button1)
         val button2View = findViewById<Button>(R.id.button2)
@@ -36,7 +37,7 @@ class QuizActivity : AppCompatActivity() {
         val samList: Array<String> = resources.getStringArray(R.array.sam_answers)
         val tomList: Array<String> = resources.getStringArray(R.array.tom_answers)
 
-        new_question()
+        new_question(questionList)
 
         for (button in buttonList) {
             button.setOnClickListener() {
@@ -70,41 +71,56 @@ class QuizActivity : AppCompatActivity() {
                         (applicationContext as Global).printScore("tom")
                     }
                 }
-                new_question()
+                new_question(questionList)
             }
         }
     }
 
-    fun new_question() {
+    fun new_question(questionList: MutableList<String>) {
 
-        val questionTextView = findViewById<TextView>(R.id.questionText)
-
-        val questionList: Array<String> = resources.getStringArray(R.array.questions)
-        val alexList: Array<String> = resources.getStringArray(R.array.alex_answers)
-        val amyList: Array<String> = resources.getStringArray(R.array.amy_answers)
-        val jackList: Array<String> = resources.getStringArray(R.array.jack_answers)
-        val samList: Array<String> = resources.getStringArray(R.array.sam_answers)
-        val tomList: Array<String> = resources.getStringArray(R.array.tom_answers)
-
-        val questionNum = 0;
-
-        questionTextView.setText(questionList.get(questionNum))
-
-        answerList.clear()
-        answerList.add(alexList.get(questionNum))
-        answerList.add(amyList.get(questionNum))
-        answerList.add(jackList.get(questionNum))
-        answerList.add(samList.get(questionNum))
-        answerList.add(tomList.get(questionNum))
-
-        val rnd = Random()
-
-        for (button in buttonList) {
-
-            val num = rnd.nextInt(answerList.size)
-            button.setText(answerList.get(num))
-            answerList.removeAt(num)
+        if ((applicationContext as Global).atLeastTen()) {
+            go_to_results()
         }
+        else {
+
+            val questionTextView = findViewById<TextView>(R.id.questionText)
+
+            val alexList: Array<String> = resources.getStringArray(R.array.alex_answers)
+            val amyList: Array<String> = resources.getStringArray(R.array.amy_answers)
+            val jackList: Array<String> = resources.getStringArray(R.array.jack_answers)
+            val samList: Array<String> = resources.getStringArray(R.array.sam_answers)
+            val tomList: Array<String> = resources.getStringArray(R.array.tom_answers)
+
+            val rnd = Random()
+
+            val questionNum = rnd.nextInt(questionList.size)
+            questionTextView.setText(questionList.get(questionNum))
+            questionList.removeAt(questionNum)
+
+            for (string in questionList) {
+                println(string)
+            }
+
+            answerList.clear()
+            answerList.add(alexList.get(questionNum))
+            answerList.add(amyList.get(questionNum))
+            answerList.add(jackList.get(questionNum))
+            answerList.add(samList.get(questionNum))
+            answerList.add(tomList.get(questionNum))
+
+            for (button in buttonList) {
+
+                val num = rnd.nextInt(answerList.size)
+                button.setText(answerList.get(num))
+                answerList.removeAt(num)
+            }
+        }
+    }
+
+    fun go_to_results () {
+
+        val resultsIntent = Intent(this, ResultActivity::class.java)
+        startActivity(resultsIntent)
 
     }
 }
