@@ -4,11 +4,15 @@ import android.app.Application
 
 class Global : Application() {
 
-    var alex:   Int = 0;
-    var amy:    Int = 0;
-    var jack:   Int = 0;
-    var sam:    Int = 0;
-    var tom:    Int = 0;
+    var alex:   Int = 0
+    var amy:    Int = 0
+    var jack:   Int = 0
+    var sam:    Int = 0
+    var tom:    Int = 0
+
+    val sortedList = ArrayList<Int>()
+
+    var mostLike = ""
 
     fun plusScore (person : String) {
 
@@ -43,12 +47,38 @@ class Global : Application() {
     }
 
     fun atLeastTen (): Boolean {
-        if ((this.alex + this.amy + this.jack + this.sam + this.tom) >= 10) {
-            return true
+
+        return (this.alex + this.amy + this.jack + this.sam + this.tom) >= 10
+
+    }
+
+    fun sortMembers (): ArrayList<Int>  {
+
+        sortedList.add(this.alex)
+        sortedList.add(this.amy)
+        sortedList.add(this.jack)
+        sortedList.add(this.sam)
+        sortedList.add(this.tom)
+
+        sortedList.sort()
+
+        return sortedList
+    }
+
+    fun returnMostSimilarMember () {
+
+        when (sortedList[4]) {
+
+            this.alex -> mostLike = "alex"
+            this.amy -> mostLike = "amy"
+            this.jack -> mostLike = "jack"
+            this.sam -> mostLike = "sam"
+            this.tom -> mostLike = "tom"
         }
-        else {
-            return false
-        }
+    }
+
+    fun get_mostLike () : String {
+        return mostLike
     }
 
 }

@@ -8,7 +8,7 @@ import android.widget.TextView
 import java.util.*
 import kotlin.collections.ArrayList
 
-abstract class QuizActivity : AppCompatActivity() {
+class QuizActivity : AppCompatActivity() {
 
     val buttonList = ArrayList<Button>()
     val answerList = ArrayList<String>()
@@ -16,8 +16,6 @@ abstract class QuizActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
-
-        val questionList: MutableList<String> = resources.getStringArray(R.array.questions).toMutableList()
 
         val button1View = findViewById<Button>(R.id.button1)
         val button2View = findViewById<Button>(R.id.button2)
@@ -37,7 +35,7 @@ abstract class QuizActivity : AppCompatActivity() {
         val samList: Array<String> = resources.getStringArray(R.array.sam_answers)
         val tomList: Array<String> = resources.getStringArray(R.array.tom_answers)
 
-        new_question(questionList)
+        new_question()
 
         for (button in buttonList) {
             button.setOnClickListener() {
@@ -71,19 +69,22 @@ abstract class QuizActivity : AppCompatActivity() {
                         (applicationContext as Global).printScore("tom")
                     }
                 }
-                new_question(questionList)
+                new_question()
             }
         }
     }
 
-    fun new_question(questionList: MutableList<String>) {
+    fun new_question() {
 
         if ((applicationContext as Global).atLeastTen()) {
             go_to_results()
         }
+
         else {
 
             val questionTextView = findViewById<TextView>(R.id.questionText)
+
+            val questionList: Array<String> = resources.getStringArray(R.array.questions)
 
             val alexList: Array<String> = resources.getStringArray(R.array.alex_answers)
             val amyList: Array<String> = resources.getStringArray(R.array.amy_answers)
@@ -94,19 +95,19 @@ abstract class QuizActivity : AppCompatActivity() {
             val rnd = Random()
 
             val questionNum = rnd.nextInt(questionList.size)
-            questionTextView.setText(questionList.get(questionNum))
-            questionList.removeAt(questionNum)
+            questionTextView.setText(questionList[questionNum])
+            //questionList.removeAt(questionNum)
 
             for (string in questionList) {
                 println(string)
             }
 
             answerList.clear()
-            answerList.add(alexList.get(questionNum))
-            answerList.add(amyList.get(questionNum))
-            answerList.add(jackList.get(questionNum))
-            answerList.add(samList.get(questionNum))
-            answerList.add(tomList.get(questionNum))
+            answerList.add(alexList[questionNum])
+            answerList.add(amyList[questionNum])
+            answerList.add(jackList[questionNum])
+            answerList.add(samList[questionNum])
+            answerList.add(tomList[questionNum])
 
             for (button in buttonList) {
 
