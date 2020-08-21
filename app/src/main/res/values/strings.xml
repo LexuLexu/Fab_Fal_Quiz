@@ -45,7 +45,7 @@
 
     <string-array name="jack_answers">
         <item>Barry Bidswell</item>
-        <item>I don't even like this degree</item>
+        <item>I don\'t even like this degree</item>
         <item>Linus Tech Tips intern</item>
         <item>Memes in bed</item>
         <item>Not egg</item>
@@ -59,7 +59,7 @@
 
     <string-array name="sam_answers">
         <item>The Monj Himself</item>
-        <item>I don't care (but I\'ll do well anyway)</item>
+        <item>I don\'t care (but I\'ll do well anyway)</item>
         <item>Professional Trombonist</item>
         <item>Being productive and having friends</item>
         <item>Toast on toast</item>
@@ -85,5 +85,20 @@
 
     </string-array>
 
+    <string-array name="sophie_quotes">
+        <item>I have never met this person before in my life</item>
+        <item>Impersonating Beyoncé is not your destiny, child</item>
+        <item>What does he even do?</item>
+        <item>He must have sold his soul to become that photogenic</item>
+        <item>This man single-handedly keeps END in business</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>You are Alex! You may be injured, but you are astonishingly handsome, have a bunch of girlfriends and are capable of literally anything. Also you\'d be better at cooking if you actually did it more often.</item>
+        <item>You are Amy! You always have plans going on, and are surrounded by your ever-adoring fans. A blessing, or a curse? Also, you can\'t eat bread.</item>
+        <item>You are Jack! You know everything about everything, memorising a bunch of compelling facts about interesting topics, even if all we hear about is smartphones and EDM.</item>
+        <item>You are Sam! Talented at anything you try, you keep it on the down-low by only playing tennis and trombone. Your love for toast surpasses all else, which is probably why you\'re still single.</item>
+        <item>You are Tom! Normal social conventions don\'t apply to you - you\'re not afraid to be the most fashionable and passionate person around... even if it means strutting the library catwalk every night.</item>
+    </string-array>
 
 </resources>
