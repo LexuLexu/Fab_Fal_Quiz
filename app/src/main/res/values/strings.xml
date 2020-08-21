@@ -10,66 +10,78 @@
         <item>Dream holiday destination?</item>
         <item>You\’re injured, but where?</item>
         <item>What\’s your spirit animal?</item>
+        <item>Universe point, what\'s the play?</item>
+        <item>Beverage of choice?</item>
 
     </string-array>
 
     <string-array name="alex_answers">
         <item>Soph</item>
-        <item>Alex Answers</item>
-        <item>Alex Answerd</item>
-        <item>Alex Answef</item>
-        <item>Alex Answerg</item>
-        <item>Alex Answerh</item>
-        <item>Alex Answerj</item>
-        <item>Alex Answerk</item>
+        <item>Tomorrow huh?</item>
+        <item>My degree</item>
+        <item>Eating breakfast</item>
+        <item>Last night\'s kebab</item>
+        <item>Did I mention I\'ve been to Japan</item>
+        <item>Everywhere</item>
+        <item>Peacock</item>
+        <item>Sky a fool</item>
+        <item>Rum and coke</item>
 
     </string-array>
 
     <string-array name="amy_answers">
         <item>Carrie</item>
-        <item>Amy Answers</item>
-        <item>Amy Answerd</item>
-        <item>Amy Answerf</item>
-        <item>Amy Answerg</item>
-        <item>Amy Answerh</item>
-        <item>Amy Answerj</item>
-        <item>Amy Answerk</item>
+        <item>I made a short film about my despair</item>
+        <item>Running forever</item>
+        <item>Way too many things</item>
+        <item>No time for breakfast</item>
+        <item>Loch Leven\'s Larder</item>
+        <item>Immune System</item>
+        <item>Not a penguin</item>
+        <item>Get hype AF</item>
+        <item>G+T</item>
 
     </string-array>
 
     <string-array name="jack_answers">
         <item>Barry Bidswell</item>
-        <item>Jack Answers</item>
-        <item>Jack Answerd</item>
-        <item>Jack Answerf</item>
-        <item>Jack Answerg</item>
-        <item>Jack Answerh</item>
-        <item>Jack Answerj</item>
-        <item>Jack Answerk</item>
+        <item>I don't even like this degree</item>
+        <item>Linus Tech Tips intern</item>
+        <item>Memes in bed</item>
+        <item>Not egg</item>
+        <item>New Zealand</item>
+        <item>Height</item>
+        <item>Armadillo</item>
+        <item>Bang it deep</item>
+        <item>Don\'t give me alcohol</item>
 
     </string-array>
 
     <string-array name="sam_answers">
         <item>The Monj Himself</item>
-        <item>Sam Answers</item>
-        <item>Sam Answerd</item>
-        <item>Sam Answerf</item>
-        <item>Sam Answerg</item>
-        <item>Sam Answerh</item>
-        <item>Sam Answerj</item>
-        <item>Sam Answerk</item>
+        <item>I don't care (but I\'ll do well anyway)</item>
+        <item>Professional Trombonist</item>
+        <item>Being productive and having friends</item>
+        <item>Toast on toast</item>
+        <item>Somewhere wholesome af</item>
+        <item>What\'s an injury?</item>
+        <item>Monj</item>
+        <item>Turn defense up to 11</item>
+        <item>Pint</item>
 
     </string-array>
 
     <string-array name="tom_answers">
         <item>Wil\' Waddle</item>
-        <item>Tom Answers</item>
-        <item>Tom Answerd</item>
-        <item>Tom Answerf</item>
-        <item>Tom Answerg</item>
-        <item>Tom Answerh</item>
-        <item>Tom Answerj</item>
-        <item>Tom Answerk</item>
+        <item>My course mates will do better than me</item>
+        <item>Skateboarding</item>
+        <item>Being a library ghoul</item>
+        <item>Cereal from the box</item>
+        <item>Wherever Abbie Grainge is</item>
+        <item>Fashion sense</item>
+        <item>Meerkat</item>
+        <item>Call travel</item>
+        <item>Cider</item>
 
     </string-array>
 
