@@ -14,9 +14,15 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        (applicationContext as Global).sortMembers()
-        (applicationContext as Global).returnMostSimilarMember()
-        mostLike = (applicationContext as Global).getMostSimilar()
+        if ((applicationContext as Global).areEqual()) {
+            mostLike = "7 Falmouth Road"
+        }
+
+        else {
+            (applicationContext as Global).sortMembers()
+            (applicationContext as Global).returnMostSimilarMember()
+            mostLike = (applicationContext as Global).getMostSimilar()
+        }
 
         val resultText = findViewById<TextView>(R.id.resultTextView)
         resultText.setText(mostLike.capitalize())
@@ -35,6 +41,7 @@ class ResultActivity : AppCompatActivity() {
             "jack" -> resultImage.setImageDrawable(getDrawable(R.drawable.jack_result))
             "sam" -> resultImage.setImageDrawable(getDrawable(R.drawable.sam_result))
             "tom" -> resultImage.setImageDrawable(getDrawable(R.drawable.tom_result))
+            "7 Falmouth Road" -> resultImage.setImageDrawable(getDrawable(R.drawable.house_result))
 
         }
 
@@ -45,6 +52,7 @@ class ResultActivity : AppCompatActivity() {
             "jack" -> sophieQuote.setText("Sophie says: \"" + quotesArray[2] + "\"")
             "sam" -> sophieQuote.setText("Sophie says: \"" + quotesArray[3] + "\"")
             "tom" -> sophieQuote.setText("Sophie says: \"" + quotesArray[4] + "\"")
+            "7 Falmouth Road" -> sophieQuote.setText("Sophie says: \"" + quotesArray[5] + "\"")
 
         }
 
@@ -55,6 +63,7 @@ class ResultActivity : AppCompatActivity() {
             "jack" -> description.setText(descArray[2])
             "sam" -> description.setText(descArray[3])
             "tom" -> description.setText(descArray[4])
+            "7 Falmouth Road" -> description.setText(descArray[5])
 
         }
 

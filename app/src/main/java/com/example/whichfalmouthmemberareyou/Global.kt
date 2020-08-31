@@ -14,6 +14,10 @@ class Global : Application() {
 
     private var mostLike = ""
 
+    fun areEqual () : Boolean {
+        return (alex == 2 && amy == 2 && jack == 2 && sam == 2 && tom == 2)
+    }
+
     fun plusScore (person : String) {
 
         when (person) {

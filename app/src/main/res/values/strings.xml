@@ -14,7 +14,7 @@
         <item>Beverage of choice?</item>
         <item>Outfit of choice?</item>
         <item>If a book were written about your life, what genre would it be?</item>
-        <item>What's your most common dream?</item>
+        <item>What\'s your most common dream?</item>
         <item>Favourite song?</item>
 
     </string-array>
@@ -115,6 +115,7 @@
         <item>What does he even do?</item>
         <item>He must have sold his soul to become that photogenic</item>
         <item>This man single-handedly keeps END in business</item>
+        <item>What, you\'re a house?</item>
     </string-array>
 
     <string-array name="descriptions">
@@ -123,6 +124,7 @@
         <item>You are Jack! You know everything about everything, memorising a bunch of compelling facts about interesting topics, even if all we hear about is smartphones and EDM.</item>
         <item>You are Sam! Talented at anything you try, you keep it on the down-low by only playing tennis and trombone. Your love for toast surpasses all else, which is probably why you\'re still single.</item>
         <item>You are Tom! Normal social conventions don\'t apply to you - you\'re not afraid to be the most fashionable and passionate person around... even if it means strutting the library catwalk every night.</item>
+        <item>You are the house! Not many (or any) people can claim to be the famous 7 Falmouth Road, but somehow you\'ve managed it. Many incredible and terrible things have happened within your four walls, and we will speak of none of them.</item>
     </string-array>
 
 </resources>
