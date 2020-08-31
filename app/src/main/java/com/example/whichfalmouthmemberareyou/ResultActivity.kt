@@ -1,5 +1,6 @@
 package com.example.whichfalmouthmemberareyou
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -9,6 +10,8 @@ import java.util.ResourceBundle.getBundle
 class ResultActivity : AppCompatActivity() {
 
     private var mostLike = ""
+
+    var soundFile = R.raw.house_song
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +69,20 @@ class ResultActivity : AppCompatActivity() {
             "7 Falmouth Road" -> description.setText(descArray[5])
 
         }
+
+        when (mostLike) {
+
+            "alex" -> soundFile = R.raw.alex_song
+            "amy" -> soundFile = R.raw.amy_song
+            "jack" -> soundFile = R.raw.jack_song
+            "sam" -> soundFile = R.raw.sam_song
+            "tom" -> soundFile = R.raw.tom_song
+            "7 Falmouth Road" -> soundFile = R.raw.house_song
+
+        }
+
+        var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, soundFile)
+        mediaPlayer?.start()
 
     }
 
