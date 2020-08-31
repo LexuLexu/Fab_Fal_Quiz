@@ -85,4 +85,12 @@ class Global : Application() {
         return mostLike
     }
 
+    fun resetScores () {
+        alex = 0
+        amy = 0
+        jack = 0
+        sam = 0
+        tom = 0
+    }
+
 }

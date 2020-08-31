@@ -1,8 +1,10 @@
 package com.example.whichfalmouthmemberareyou
 
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import java.util.ResourceBundle.getBundle
@@ -84,6 +86,14 @@ class ResultActivity : AppCompatActivity() {
         var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, soundFile)
         mediaPlayer?.start()
 
+    }
+
+    fun restartQuiz (view : View) {
+
+        (applicationContext as Global).resetScores()
+
+        val mainIntent = Intent(this, MainActivity::class.java)
+        startActivity(mainIntent)
     }
 
 }
