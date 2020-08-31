@@ -1,9 +1,11 @@
 package com.example.whichfalmouthmemberareyou
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import java.util.*
 import kotlin.collections.ArrayList
@@ -14,6 +16,7 @@ class QuizActivity : AppCompatActivity() {
     private val answerList = ArrayList<String>()
 
     private lateinit var questionList: Array<String>
+    private lateinit var pictureList: Array<Int>
 
     lateinit var alexList: Array<String>
     lateinit var amyList: Array<String>
@@ -118,18 +121,16 @@ class QuizActivity : AppCompatActivity() {
 
         else {
 
-            (applicationContext as Global).printScore("alex")
-            (applicationContext as Global).printScore("amy")
-            (applicationContext as Global).printScore("jack")
-            (applicationContext as Global).printScore("sam")
-            (applicationContext as Global).printScore("tom")
-
             val questionTextView = findViewById<TextView>(R.id.questionText)
+            val pictureView = findViewById<ImageView>(R.id.pictureView)
 
             val rnd = Random()
 
             questionNum = rnd.nextInt(questionList.size)
             questionTextView.setText(questionList[questionNum])
+
+            var pic: Drawable = getDrawable(pictureList[questionNum])
+            pictureView.setImageDrawable(pic)
 
             answerList.clear()
             answerList.add(alexList[questionNum])
@@ -146,6 +147,7 @@ class QuizActivity : AppCompatActivity() {
             }
 
             questionList = removeQ(questionList, questionNum)
+            pictureList = removeP(pictureList, questionNum)
 
             for (string in questionList) {
                 println(string)
@@ -173,9 +175,36 @@ class QuizActivity : AppCompatActivity() {
         return result.toTypedArray()
     }
 
+    fun removeP(arr: Array<Int>, index: Int): Array<Int> {
+        if (index < 0 || index >= arr.size) {
+            return arr
+        }
+
+        val result = arr.toMutableList()
+        result.removeAt(index)
+        return result.toTypedArray()
+    }
+
     fun initializeLists () {
 
         questionList = resources.getStringArray(R.array.questions)
+        pictureList = arrayOf(
+            R.drawable.cameo,
+            R.drawable.exam,
+            R.drawable.no_frisbee,
+            R.drawable.seven_pm,
+            R.drawable.breakfast,
+            R.drawable.holiday,
+            R.drawable.injury,
+            R.drawable.spirit_animal,
+            R.drawable.universe_point,
+            R.drawable.beverage,
+            R.drawable.outfit,
+            R.drawable.book_genre,
+            R.drawable.dream,
+            R.drawable.song,
+            R.drawable.greatest_achievement,
+            R.drawable.role_model)
 
         alexList = resources.getStringArray(R.array.alex_answers)
         amyList = resources.getStringArray(R.array.amy_answers)
@@ -183,12 +212,7 @@ class QuizActivity : AppCompatActivity() {
         samList = resources.getStringArray(R.array.sam_answers)
         tomList = resources.getStringArray(R.array.tom_answers)
 
-        for (string in alexList) {
-            println(string)
-        }
-        for (string in questionList) {
-            println(string)
-        }
+
 
     }
 
