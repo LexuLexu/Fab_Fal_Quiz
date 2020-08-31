@@ -4,15 +4,15 @@ import android.app.Application
 
 class Global : Application() {
 
-    var alex:   Int = 0
-    var amy:    Int = 0
-    var jack:   Int = 0
-    var sam:    Int = 0
-    var tom:    Int = 0
+    private var alex:   Int = 0
+    private var amy:    Int = 0
+    private var jack:   Int = 0
+    private var sam:    Int = 0
+    private var tom:    Int = 0
 
-    val sortedList = ArrayList<Int>()
+    private val sortedList = ArrayList<Int>()
 
-    var mostLike = ""
+    private var mostLike = ""
 
     fun plusScore (person : String) {
 
@@ -77,7 +77,7 @@ class Global : Application() {
         }
     }
 
-    fun get_mostLike () : String {
+    fun getMostSimilar () : String {
         return mostLike
     }
 

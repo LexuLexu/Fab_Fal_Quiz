@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import java.util.ResourceBundle.getBundle
 
 class ResultActivity : AppCompatActivity() {
 
-    var mostLike = ""
+    private var mostLike = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,7 +16,7 @@ class ResultActivity : AppCompatActivity() {
 
         (applicationContext as Global).sortMembers()
         (applicationContext as Global).returnMostSimilarMember()
-        mostLike = (applicationContext as Global).get_mostLike()
+        mostLike = (applicationContext as Global).getMostSimilar()
 
         val resultText = findViewById<TextView>(R.id.resultTextView)
         resultText.setText(mostLike.capitalize())
@@ -58,4 +59,5 @@ class ResultActivity : AppCompatActivity() {
         }
 
     }
+
 }
